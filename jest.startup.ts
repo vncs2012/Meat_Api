@@ -22,9 +22,9 @@ const beforeAllTests = () => {
     .then(() => User.remove({}).exec())
     .then(() => {
       let admin = new User()
-      admin.name = 'Admin'
-      admin.email = 'dmin@email.com'
-      admin.password = '123456'
+      admin.name = 'admin'
+      admin.email = 'admin@email.com'
+      admin.password = '1234567'
       admin.profiles = ['admin', 'user']
       return admin.save()
     })
@@ -39,7 +39,7 @@ const afterAllTests = () => {
 beforeAllTests()
   .then(() => jestCli.run())
   .then(() => afterAllTests())
-  .catch(error=>{
+  .catch(error => {
     console.error(error)
     process.exit(1)
   })
