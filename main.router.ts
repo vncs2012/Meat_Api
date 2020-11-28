@@ -7,7 +7,8 @@ class MainRouter extends Router {
       resp.json({
         users: '/users',
         restaurants: '/restaurants',
-        reviews: '/reviews'
+        reviews: '/reviews',
+        version:'1.0.0'
       })
     })
   }
